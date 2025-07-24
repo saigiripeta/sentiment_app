@@ -1,0 +1,7 @@
+streamlit
+transformers
+torch
+pandas
+plotly
+deep-translator
+pip install -r requirements.txt
