@@ -3,9 +3,21 @@ from transformers import pipeline
 from deep_translator import GoogleTranslator
 import pandas as pd
 import plotly.express as px
+from transformers import pipeline
+
+
+
 
 # Load sentiment pipeline from Hugging Face
 sentiment_model = pipeline("sentiment-analysis")
+sentiment_model = pipeline("sentiment-analysis")
+
+sentiment_model = pipeline(
+    "sentiment-analysis",
+    model="distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+    device=-1  # CPU only
+)
+
 
 # App UI
 st.title("🧠 Sentiment Analysis with BERT")
